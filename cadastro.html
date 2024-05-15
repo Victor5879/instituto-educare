@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carteirinhas - Instituto Educare</title>
+    <title>Cadastro - Instituto Educare</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -23,18 +23,23 @@
         </nav>
     </header>
 
-    <section class="carteirinhas">
-        <h1>Carteirinhas Estudantis</h1>
-        <p>Descontos e vantagens exclusivas para estudantes. Benefícios incluem acesso a eventos, descontos em livrarias, transporte e muito mais.</p>
-        <h2>Como Obter</h2>
-        <p>Siga os passos abaixo para obter sua carteirinha estudantil:</p>
-        <ol>
-            <li>Preencha o <a href="cadastro.html">formulário de cadastro</a>.</li>
-            <li>Realize o pagamento da taxa de emissão.</li>
-            <li>Aguarde a confirmação e emissão da carteirinha.</li>
-        </ol>
-        <h2>FAQ</h2>
-        <p>Confira as perguntas frequentes sobre as carteirinhas estudantis.</p>
+    <section class="cadastro">
+        <h1>Cadastro</h1>
+        <form action="pagamento.html" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="data-nascimento">Data de Nascimento:</label>
+            <input type="date" id="data-nascimento" name="data-nascimento" required>
+            <label for="residencia">Local de Residência:</label>
+            <input type="text" id="residencia" name="residencia" required>
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" required>
+            <label for="rg">RG:</label>
+            <input type="text" id="rg" name="rg" required>
+            <label for="matricula">Matrícula:</label>
+            <input type="text" id="matricula" name="matricula">
+            <button type="submit">Prosseguir para Pagamento</button>
+        </form>
     </section>
 
     <footer>

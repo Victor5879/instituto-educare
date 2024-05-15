@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento - Instituto Educare</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo Instituto Educare">
+            <span>Instituto Educare</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="carteirinhas.html">Carteirinhas</a></li>
+                <li><a href="area-aluno.html">Área do Aluno</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="pagamento">
+        <h1>Pagamento</h1>
+        <form action="confirmacao.html" method="POST">
+            <label for="cartao">Número do Cartão:</label>
+            <input type="text" id="cartao" name="cartao" required>
+            <label for="validade">Validade:</label>
+            <input type="text" id="validade" name="validade" required>
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required>
+            <button type="submit">Finalizar Pagamento</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2024 Instituto Educare -
