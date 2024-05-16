@@ -5,6 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro - URES Brasil</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #cc0000;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header .logo {
+            height: 50px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 1rem;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        section#register {
+            padding: 2rem;
+            text-align: center;
+        }
+        section#register h2 {
+            color: #cc0000;
+            margin-bottom: 1rem;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form label {
+            margin-bottom: 0.5rem;
+        }
+        form input[type="text"],
+        form input[type="date"],
+        form input[type="submit"] {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        form input[type="submit"] {
+            background-color: #cc0000;
+            color: white;
+            cursor: pointer;
+        }
+        form input[type="submit"]:hover {
+            background-color: #ff4444;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -21,7 +86,7 @@
     </header>
     <section id="register">
         <h2>Cadastre-se</h2>
-        <form action="/register" method="POST">
+        <form action="/register" method="POST" onsubmit="return validateForm()">
             <label for="name">Nome Completo:</label>
             <input type="text" id="name" name="name" required>
             <label for="dob">Data de Nascimento:</label>
@@ -40,5 +105,18 @@
     <footer>
         <p>Contato: uresbrasil@gmail.com | Telefone: (11) 2084-6992</p>
     </footer>
+
+    <script>
+        function validateForm() {
+            var inputs = document.querySelectorAll('input[required]');
+            for (var i = 0; i < inputs.length; i++) {
+                if (!inputs[i].value) {
+                    alert('Por favor, preencha todos os campos obrigatórios.');
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
 </body>
 </html>
