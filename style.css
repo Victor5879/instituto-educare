@@ -40,12 +40,36 @@ nav ul li a {
 }
 
 .hero {
-    background-image: url('assets/images/hero-bg.jpg');
-    background-size: cover;
-    color: white;
+    background-color: #f4f4f4;
     text-align: center;
     padding: 5rem 1rem;
 }
+
+.hero h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    color: #555;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.hero .btn {
+    background-color: #cc0000;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #ff4444;
+}
+
 
 .hero button {
     background-color: #cc0000;
