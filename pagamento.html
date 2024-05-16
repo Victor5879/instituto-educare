@@ -1,40 +1,245 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagamento - Instituto Educare</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Pagamento - URES Brasil</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="logo.png" alt="Logo Instituto Educare">
-            <span>Instituto Educare</span>
-        </div>
+        <img src="assets/images/ures-logo.png" alt="URES Brasil Logo" class="logo">
         <nav>
             <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="sobre.html">Sobre Nós</a></li>
-                <li><a href="carteirinhas.html">Carteirinhas</a></li>
-                <li><a href="area-aluno.html">Área do Aluno</a></li>
-                <li><a href="contato.html">Contato</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">Sobre</a></li>
+                <li><a href="index.html#benefits">Benefícios</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="index.html#contact">Contato</a></li>
             </ul>
         </nav>
     </header>
+    <section id="payment">
+        <h2>Pagamento</h2>
+        <form action="/payment" method="POST">
+            <label for="card-name">Nome no Cartão:</label>
+            <input type="text" id="card-name" name="card-name" required>
+            <label for="card-number">Número do Cartão:</label>
+Para ajudar a criar o site com as funcionalidades e o design desejados, aqui estão os passos detalhados desde o início, incluindo onde fazer upload dos arquivos no GitHub.
 
-    <section class="pagamento">
-        <h1>Pagamento</h1>
-        <form action="confirmacao.html" method="POST">
-            <label for="cartao">Número do Cartão:</label>
-            <input type="text" id="cartao" name="cartao" required>
-            <label for="validade">Validade:</label>
-            <input type="text" id="validade" name="validade" required>
-            <label for="cvv">CVV:</label>
-            <input type="text" id="cvv" name="cvv" required>
-            <button type="submit">Finalizar Pagamento</button>
-        </form>
-    </section>
+### Passo a Passo para Configurar o Site no GitHub
 
-    <footer>
-        <p>© 2024 Instituto Educare -
+1. **Criar uma Conta no GitHub (se ainda não tiver):**
+   - Acesse [GitHub](https://github.com) e crie uma conta.
+
+2. **Criar um Novo Repositório:**
+   - No GitHub, clique no ícone de "+" no canto superior direito e selecione "New repository".
+   - Nomeie o repositório, por exemplo, `instituto-educare`.
+   - Marque a opção "Public" e "Add a README file".
+   - Clique em "Create repository".
+
+3. **Clonar o Repositório (opcional):**
+   - Se desejar, você pode clonar o repositório para seu computador usando Git:
+     ```bash
+     git clone https://github.com/seu-usuario/instituto-educare.git
+     ```
+   - Navegue até a pasta do repositório:
+     ```bash
+     cd instituto-educare
+     ```
+
+4. **Adicionar Arquivos ao Repositório:**
+   - No GitHub, vá até seu repositório `instituto-educare`.
+   - Clique em "Add file" e selecione "Upload files".
+   - Faça upload dos arquivos `index.html`, `style.css`, e outros necessários.
+
+### Estrutura de Arquivos
+
+1. **Estrutura de Pastas:**
+   - Crie a seguinte estrutura de pastas e arquivos:
+     ```
+     instituto-educare/
+     ├── assets/
+     │   ├── images/
+     │   │   ├── ures-logo.png
+     │   │   ├── hero-bg.jpg
+     ├── index.html
+     ├── style.css
+     ├── cadastro.html
+     ├── pagamento.html
+     ```
+
+2. **Adicione os Códigos:**
+   - `index.html`:
+     ```html
+     <!DOCTYPE html>
+     <html lang="pt-BR">
+     <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>URES Brasil</title>
+         <link rel="stylesheet" href="style.css">
+     </head>
+     <body>
+         <header>
+             <img src="assets/images/ures-logo.png" alt="URES Brasil Logo" class="logo">
+             <nav>
+                 <ul>
+                     <li><a href="#home">Home</a></li>
+                     <li><a href="#about">Sobre</a></li>
+                     <li><a href="#benefits">Benefícios</a></li>
+                     <li><a href="#register">Cadastro</a></li>
+                     <li><a href="#contact">Contato</a></li>
+                 </ul>
+             </nav>
+         </header>
+         <section id="home">
+             <div class="hero">
+                 <h1>Bem-vindo à URES Brasil</h1>
+                 <button onclick="window.location.href='#register'">Cadastre-se</button>
+             </div>
+         </section>
+         <section id="about">
+             <h2>O que é a URES Brasil?</h2>
+             <p>A URES Brasil é uma das principais organizações da sociedade civil brasileira...</p>
+         </section>
+         <section id="benefits">
+             <h2>Benefícios</h2>
+             <p>Descontos em cinemas, eventos esportivos, culturais e muito mais...</p>
+         </section>
+         <section id="register">
+             <h2>Cadastre-se</h2>
+             <form action="/register" method="POST">
+                 <label for="name">Nome Completo:</label>
+                 <input type="text" id="name" name="name" required>
+                 <label for="dob">Data de Nascimento:</label>
+                 <input type="date" id="dob" name="dob" required>
+                 <label for="address">Endereço:</label>
+                 <input type="text" id="address" name="address" required>
+                 <label for="cpf">CPF:</label>
+                 <input type="text" id="cpf" name="cpf" required>
+                 <label for="rg">RG:</label>
+                 <input type="text" id="rg" name="rg" required>
+                 <label for="matricula">Matrícula:</label>
+                 <input type="text" id="matricula" name="matricula">
+                 <button type="submit">Enviar</button>
+             </form>
+         </section>
+         <section id="contact">
+             <h2>Contato</h2>
+             <form>
+                 <label for="contact-name">Nome:</label>
+                 <input type="text" id="contact-name" name="contact-name" required>
+                 <label for="contact-email">Email:</label>
+                 <input type="email" id="contact-email" name="contact-email" required>
+                 <label for="message">Mensagem:</label>
+                 <textarea id="message" name="message" required></textarea>
+                 <button type="submit">Enviar</button>
+             </form>
+         </section>
+         <footer>
+             <p>Contato: uresbrasil@gmail.com | Telefone: (11) 2084-6992</p>
+         </footer>
+     </body>
+     </html>
+     ```
+
+   - `style.css`:
+     ```css
+     body {
+         font-family: Arial, sans-serif;
+         margin: 0;
+         padding: 0;
+         background-color: #f4f4f4;
+     }
+     header {
+         background-color: #cc0000;
+         color: white;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         padding: 1rem 2rem;
+     }
+     header .logo {
+         height: 50px;
+     }
+     nav ul {
+         list-style: none;
+         padding: 0;
+         display: flex;
+         gap: 1rem;
+     }
+     nav ul li {
+         display: inline;
+     }
+     nav ul li a {
+         color: white;
+         text-decoration: none;
+     }
+     .hero {
+         background-image: url('assets/images/hero-bg.jpg');
+         background-size: cover;
+         color: white;
+         text-align: center;
+         padding: 5rem 1rem;
+     }
+     .hero button {
+         background-color: #cc0000;
+         color: white;
+         padding: 0.5rem 1rem;
+         border: none;
+         cursor: pointer;
+     }
+     section {
+         padding: 2rem;
+     }
+     section h2 {
+         color: #cc0000;
+     }
+     form {
+         display: flex;
+         flex-direction: column;
+         gap: 1rem;
+     }
+     form label {
+         font-weight: bold;
+     }
+     form input, form textarea, form button {
+         padding: 0.5rem;
+         border: 1px solid #ccc;
+     }
+     form button {
+         background-color: #cc0000;
+         color: white;
+         cursor: pointer;
+     }
+     footer {
+         background-color: #333;
+         color: white;
+         text-align: center;
+         padding: 1rem;
+     }
+     ```
+
+### Upload dos Arquivos
+
+1. **Faça Upload dos Arquivos no GitHub:**
+   - Vá para a página do seu repositório no GitHub.
+   - Clique em "Add file" e depois em "Upload files".
+   - Arraste e solte os arquivos `index.html`, `style.css`, `cadastro.html`, `pagamento.html` e as imagens na estrutura de pastas `assets/images`.
+   - Clique em "Commit changes".
+
+2. **Publicar o Site no GitHub Pages:**
+   - No repositório, clique em "Settings".
+   - No menu lateral, clique em "Pages".
+   - Em "Source", selecione a branch principal (`main` ou `master`).
+   - Clique em "Save".
+
+3. **Acessar o Site:**
+   - Após alguns minutos, seu site estará disponível em `https://seu-usuario.github.io/instituto-educare/`.
+
+### Melhorias e Funcionalidades Adicionais
+- **Formulário de Cadastro:** Implementar backend para processar os dados dos formulários. Você pode usar serviços como Firebase ou configurar um servidor com Node.js, PHP, etc.
+- **Pagamento:** Para processar pagamentos, integre com APIs de pagamento como PayPal, Stripe, ou PagSeguro.
+
+Essa estrutura deve lhe proporcionar um ponto de partida robusto para desenvolver seu site conforme suas necessidades. Se precisar de mais ajuda com a parte backend ou outras funcionalidades, por favor, avise.
