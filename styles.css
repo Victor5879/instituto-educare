@@ -106,7 +106,8 @@ main section {
     font-weight: bold;
 }
 
-#register-form input {
+#register-form input,
+#register-form select {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
