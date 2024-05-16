@@ -1,7 +1,7 @@
 // Configuração do Firebase
 const firebaseConfig = {
     apiKey: "AIzaSyAaEbYmkP-Tek2JSoZZuDLdgCKJskQg450",
-    authDomain: instituto-educare.firebaseapp.com",
+    authDomain: "instituto-educare.firebaseapp.com",
     projectId: "instituto-educare",
     storageBucket: "instituto-educare.appspot.com",
     messagingSenderId: "879909414129",
@@ -20,13 +20,15 @@ const formSteps = document.querySelectorAll('.form-step');
 
 function nextStep() {
     formSteps[currentStep].style.display = 'none';
-    currentStep = (currentStep + 1) % formSteps.length;
+    currentStep++;
+    if (currentStep >= formSteps.length) currentStep = formSteps.length - 1;
     formSteps[currentStep].style.display = 'block';
 }
 
 function prevStep() {
     formSteps[currentStep].style.display = 'none';
-    currentStep = (currentStep - 1 + formSteps.length) % formSteps.length;
+    currentStep--;
+    if (currentStep < 0) currentStep = 0;
     formSteps[currentStep].style.display = 'block';
 }
 
@@ -67,6 +69,9 @@ document.getElementById('register-form').addEventListener('submit', function(eve
     .then(() => {
         alert('Usuário registrado com sucesso!');
         document.getElementById('register-form').reset();
+        currentStep = 0;
+        formSteps.forEach(step => step.style.display = 'none');
+        formSteps[0].style.display = 'block';
     })
     .catch(error => {
         console.error('Erro ao registrar usuário: ', error);

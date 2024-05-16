@@ -1,16 +1,18 @@
 /* Estilos globais */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
 /* Cabeçalho */
 header {
     background-color: #004080;
     color: #fff;
-    padding: 10px 0;
+    padding: 15px 0;
 }
 
 nav {
@@ -41,17 +43,25 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff9900;
 }
 
 /* Seções */
 main section {
-    padding: 40px 20px;
+    padding: 60px 20px;
     max-width: 1200px;
     margin: 0 auto;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #home {
-    background-color: #f0f0f0;
     text-align: center;
 }
 
@@ -62,44 +72,29 @@ main section {
 
 #home p {
     font-size: 18px;
+    margin-bottom: 30px;
 }
 
-/* Formulário de contato */
-#contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-#contact-form label {
-    font-weight: bold;
-}
-
-#contact-form input,
-#contact-form textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#contact-form button {
-    background-color: #004080;
+#home button {
+    background-color: #ff9900;
     color: #fff;
-    padding: 10px;
+    padding: 15px 30px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
 }
 
-#contact-form button:hover {
-    background-color: #002040;
+#home button:hover {
+    background-color: #cc7a00;
 }
 
-/* Formulário de cadastro */
+/* Formulário */
 #register-form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
 #register-form label {
@@ -116,14 +111,23 @@ main section {
 #register-form button {
     background-color: #004080;
     color: #fff;
-    padding: 10px;
+    padding: 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 #register-form button:hover {
     background-color: #002040;
+}
+
+.form-step {
+    display: none;
+}
+
+.form-step:first-child {
+    display: block;
 }
 
 /* Rodapé */
@@ -131,5 +135,8 @@ footer {
     background-color: #004080;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
