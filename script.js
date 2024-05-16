@@ -1,11 +1,11 @@
 // Configuração do Firebase
 const firebaseConfig = {
-    apiKey: "SUA_API_KEY",
-    authDomain: "SEU_AUTH_DOMAIN",
-    projectId: "SEU_PROJECT_ID",
-    storageBucket: "SEU_STORAGE_BUCKET",
-    messagingSenderId: "SEU_MESSAGING_SENDER_ID",
-    appId: "SEU_APP_ID"
+    apiKey: "AIzaSyAaEbYmkP-Tek2JSoZZuDLdgCKJskQg450",
+    authDomain: instituto-educare.firebaseapp.com",
+    projectId: "instituto-educare",
+    storageBucket: "instituto-educare.appspot.com",
+    messagingSenderId: "879909414129",
+    appId: "1:879909414129:web:b884560c022904e56c7550",
 };
 
 firebase.initializeApp(firebaseConfig);
