@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Aluno - URES Brasil</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="assets/images/ures-logo.png" alt="URES Brasil Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">Sobre</a></li>
+                <li><a href="index.html#benefits">Benefícios</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="index.html#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="aluno">
+        <h2>Bem-vindo, [Nome do Aluno]</h2>
+        <div class="carteirinha">
+            <h3>Sua Carteirinha</h3>
+            <img src="assets/images/carteirinha-placeholder.png" alt="Carteirinha do Aluno">
+            <button onclick="window.print()">Imprimir</button>
+        </div>
+        <div class="cursos">
+            <h3>Área de Cursos</h3>
+            <ul>
+                <li><a href="#">Curso 1</a></li>
+                <li><a href="#">Curso 2</a></li>
+                <li><a href="#">Curso 3</a></li>
+            </ul>
+        </div>
+        <div class="validador">
+            <h3>Validador de Carteirinha</h3>
+            <button onclick="scanQRCode()">Escanear QR Code</button>
+            <div id="qr-reader" style="width:500px"></div>
+        </div>
+    </section>
+    <script src="js/qr-code.js"></script>
+</body>
+</html>
