@@ -8,37 +8,33 @@
 </head>
 <body>
     <header>
-        <div class="logo">Instituto Educare</div>
+        <img src="images/ures-logo.png" alt="Instituto Educare" class="logo">
         <nav>
             <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="sobre.html">Sobre Nós</a></li>
-                <li><a href="carteirinhas.html">Carteirinhas</a></li>
-                <li><a href="area-aluno.html">Área do Aluno</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
                 <li><a href="contato.html">Contato</a></li>
+                <li><a href="area-aluno.html">Área do Aluno</a></li>
             </ul>
         </nav>
     </header>
-
-    <section class="area-aluno">
-        <h1>Área do Aluno</h1>
-        <form action="login.php" method="POST">
-            <label for="username">Usuário:</label>
-            <input type="text" id="username" name="username" required>
-            <label for="password">Senha:</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit">Entrar</button>
-        </form>
-    </section>
-
+    <main>
+        <section id="area-aluno">
+            <h2>Área do Aluno</h2>
+            <form id="login-form">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Entrar</button>
+            </form>
+        </section>
+    </main>
     <footer>
-        <p>© 2024 Instituto Educare - Todos os direitos reservados</p>
-        <p>Endereço, Telefone, Email</p>
-        <div class="social-media">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">Twitter</a>
-        </div>
+        <p>&copy; 2024 Instituto Educare. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
