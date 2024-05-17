@@ -70,12 +70,77 @@ nav ul li a {
     background-color: #ff4444;
 }
 
-
 .hero button {
     background-color: #cc0000;
     color: white;
     padding: 0.5rem 1rem;
     border: none;
+    cursor: pointer;
+}
+
+#area-aluno {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 400px;
+    margin: 2rem auto;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#login-form label {
+    margin-bottom: 5px;
+}
+
+#login-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+#login-form button {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#cadastro {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+#cadastro-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#cadastro-form label {
+    margin-bottom: 5px;
+}
+
+#cadastro-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+#cadastro-form button {
+    padding: 10px;
+    border: none;
+    background-color: #cc0000;
+    color: white;
+    border-radius: 10px;
     cursor: pointer;
 }
 
@@ -88,4 +153,3 @@ footer {
     text-align: center;
     padding: 1rem;
 }
-
